@@ -78,7 +78,7 @@ gsap.to("#page3",{
   scrollTrigger:{
     trigger:"#page3",
     scroller:"#main",
-    markers:true,
+    markers:false,
     start:"top 0%",
     end:"top 1%",
     scrub:2,
