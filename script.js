@@ -87,4 +87,66 @@ gsap.to("#page3",{
 })
 
 
+gsap.to("#page5 #page-part1",{
+    x:-300,
+    scrollTrigger:{
+      trigger:"#page5 #page-part1",
+      scroller:"#main",
+      markers:false,
+      scrub:true,
+      start:"top 110%",
+      end:"top -20%",
+    }
+
+})
+gsap.to("#page5 #page-part2",{
+  x:300,
+  scrollTrigger:{
+    trigger:"#page5 #page-part1",
+    scroller:"#main",
+    markers:false,
+    scrub:true,
+    start:"top 110%",
+    end:"top -20%"
+  }
+
+})
+gsap.to("#page6 .cards",{
+  x:-80,
+  scrollTrigger:{
+    trigger:"#page6 #page6-card-holder",
+    scroller:"#main",
+    marker:true,
+    scrub:true,
+  }
+})
+
+gsap.from("#page7 #page7-spain-collection-tag h2",{
+  y:100,
+  opacity:0,
+  scrollTrigger:{
+    trigger:"#page7 #page7-spain-collection-tag h2",
+    scroller:"#main",
+    markers:false,
+    scrub:true,
+    stagger:0.2,
+    start:"top 115%",
+    end:"top 105%",
+
+  }
+})
+
+// Mouse work
+var main = document.querySelector("#main");
+var cursr = document.querySelector("#cursor");
+
+
+main.addEventListener("mousemove",function(dets){
+  console.log(dets);
+  cursr.style.left=dets.x+-10+"px";
+  cursr.style.top=dets.y+-10+"px";
+  
+})
+
+
 
